@@ -13,7 +13,7 @@ try:
     source.raise_for_status()
 
     soup = BeautifulSoup(source.text, 'html.parser')
-    movies = soup.find("ul", class_="ipc-metadata-list ipc-metadata-list--dividers-between sc-3f13560f-0 sTTRj compact-list-view ipc-metadata-list--base").find_all('li')
+    movies = soup.find("ul", class_="ipc-metadata-list ipc-metadata-list--dividers-between sc-71ed9118-0 kxsUNk compact-list-view ipc-metadata-list--base").find_all('li')
     
     for movie in movies:
         name=movie.find("a", class_="ipc-title-link-wrapper").h3.text
